@@ -1,0 +1,24 @@
+POST http://localhost:3001/api/questions
+Content-Type: application/json
+
+{
+    "title": "is this still still correct?",
+    "options": [
+        {
+            "text": "yes",
+            "isCorrect": true
+        },
+        {
+            "text": "no",
+            "isCorrect": false
+        },
+        {
+            "text": "no",
+            "isCorrect": false
+        },
+        {
+            "text": "no",
+            "isCorrect": false
+        }
+    ]
+}

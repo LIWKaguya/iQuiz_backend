@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const optionSchema = mongoose.Schema({
     text: String,
-    isCorrect: Boolean
+    isCorrect: Boolean,
+    _id: false
 })
 
 const questionSchema = mongoose.Schema({
@@ -18,4 +19,4 @@ questionSchema.set('toJSON', {
     }
 })
 
-module.exports = questionSchema
+module.exports = mongoose.model('Question', questionSchema);

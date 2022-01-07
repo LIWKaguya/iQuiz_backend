@@ -15,6 +15,18 @@ questionsRouter.get('/:id', async (req, res) => {
     }
 });
 
+questionsRouter.post('/', async (req, res) => {
+    const { body } = req
+
+    const question = new Question({
+        title: body.title,
+        options: body.options
+    })
+
+    const savedQuestion = await question.save();
+
+    res.json(savedQuestion.toJSON())
+})
 
 
 module.exports = questionsRouter;
