@@ -1,5 +1,7 @@
 const questionsRouter = require('express').Router();
-const Question = require('../models/question');
+const questionImport = require('../models/question');
+
+const { Question } = questionImport
 
 questionsRouter.get('/', async (req, res) => {
     const questions = await Question.find({})

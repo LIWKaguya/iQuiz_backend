@@ -19,4 +19,7 @@ questionSchema.set('toJSON', {
     }
 })
 
-module.exports = mongoose.model('Question', questionSchema);
+module.exports =  {
+    Question: mongoose.model('Question', questionSchema),
+    questionSchema
+}
